@@ -4919,8 +4919,11 @@ https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-s
     <!-- http://case.example.org/core#type -->
 
     <owl:DatatypeProperty rdf:about="http://case.example.org/core#type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://case.example.org/core#UcoObject"/>
         <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RsC9N1ILFaWneLxl2mMbcd"/>
+        <rdfs:domain rdf:resource="http://yaksa#Permissions"/>
+        <rdfs:domain rdf:resource="http://yaksa#Resource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>A cyber-relevant concept. This is the base object defining the minimal core set of properties to act as a consistent, unifying and interoperable foundation for all explicit and interrelateable content objects within the Unified Cyber Ontology (uco).</rdfs:comment>
     </owl:DatatypeProperty>
@@ -4993,6 +4996,7 @@ https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-s
         <rdfs:domain rdf:resource="http://case.example.org/core#LinuxPackage"/>
         <rdfs:domain rdf:resource="http://case.example.org/core#UNIXProcess"/>
         <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RhNSR9UBOxBTIb6iiolJJD"/>
+        <rdfs:domain rdf:resource="http://yaksa#DexFile"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -8175,6 +8179,285 @@ http://www4.cs.fau.de/Projects/JX/Projects/TCP/tcpstate.html</rdfs:comment>
     
 
 
+    <!-- http://yaksa#activities -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#activities">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Zygote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#activity -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#activity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#AndroidManifest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#app_contexts -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#app_contexts">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Zygote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#asset_manager -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#asset_manager">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Zygote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#assets -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#assets">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Zygote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#broadcast_receiver -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#broadcast_receiver">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#AndroidManifest"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#content_provider -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#content_provider">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#custom -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#custom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Permissions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#dalvik_heap -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#dalvik_heap">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Heap"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#data -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#data">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#DexFile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#death_recipients -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#death_recipients">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Zygote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#dependency -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#dependency">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Libraries"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#entry_point -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#entry_point">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Libraries"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#exported_function -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#exported_function">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Libraries"/>
+        <rdfs:domain rdf:resource="http://yaksa#Shared"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#hash -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#hash">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#hash_digest_algo -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#hash_digest_algo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://case.example.org/core#Hash"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#linker_data -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#linker_data">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#DexFile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#local_binders -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#local_binders">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Zygote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#maximum_version -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#maximum_version">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#AndroidSDK"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#method -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#method">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#DexFile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#minimum_version -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#minimum_version">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#AndroidSDK"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#native_heap -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#native_heap">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Heap"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#native_stack -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#native_stack">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Stack"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#parcel_memory -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#parcel_memory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Zygote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#runtime -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#runtime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Permissions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#service -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#service">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#AndroidManifest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#signer -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#signer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#ApplicationCertificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://yaksa#views -->
+
+    <owl:DatatypeProperty rdf:about="http://yaksa#views">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://yaksa#Zygote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -10129,6 +10412,135 @@ https://msdn.microsoft.com/en-us/library/windows/desktop/ms684841(v=vs.85).aspx<
     
 
 
+    <!-- http://yaksa#AndroidDevice -->
+
+    <owl:Class rdf:about="http://yaksa#AndroidDevice">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#AndroidManifest -->
+
+    <owl:Class rdf:about="http://yaksa#AndroidManifest">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
+        <owl:disjointWith rdf:resource="http://yaksa#AndroidSDK"/>
+        <owl:disjointWith rdf:resource="http://yaksa#Permissions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#AndroidSDK -->
+
+    <owl:Class rdf:about="http://yaksa#AndroidSDK">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#ApplicationCertificate -->
+
+    <owl:Class rdf:about="http://yaksa#ApplicationCertificate">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#ApplicationComponents -->
+
+    <owl:Class rdf:about="http://yaksa#ApplicationComponents">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://yaksa#AndroidManifest"/>
+            <rdf:Description rdf:about="http://yaksa#ApplicationCertificate"/>
+            <rdf:Description rdf:about="http://yaksa#DexFile"/>
+            <rdf:Description rdf:about="http://yaksa#Libraries"/>
+            <rdf:Description rdf:about="http://yaksa#Resource"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#DeviceAndroidVersion -->
+
+    <owl:Class rdf:about="http://yaksa#DeviceAndroidVersion">
+        <rdfs:subClassOf rdf:resource="http://yaksa#AndroidDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#DeviceInformation -->
+
+    <owl:Class rdf:about="http://yaksa#DeviceInformation">
+        <rdfs:subClassOf rdf:resource="http://yaksa#AndroidDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#DeviceModel -->
+
+    <owl:Class rdf:about="http://yaksa#DeviceModel">
+        <rdfs:subClassOf rdf:resource="http://yaksa#AndroidDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#DeviceName -->
+
+    <owl:Class rdf:about="http://yaksa#DeviceName">
+        <rdfs:subClassOf rdf:resource="http://yaksa#AndroidDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#DevicePatchLevel -->
+
+    <owl:Class rdf:about="http://yaksa#DevicePatchLevel">
+        <rdfs:subClassOf rdf:resource="http://yaksa#AndroidDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#DeviceRooted -->
+
+    <owl:Class rdf:about="http://yaksa#DeviceRooted">
+        <rdfs:subClassOf rdf:resource="http://yaksa#AndroidDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#DeviceSeccompFilt -->
+
+    <owl:Class rdf:about="http://yaksa#DeviceSeccompFilt">
+        <rdfs:subClassOf rdf:resource="http://yaksa#AndroidDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#DexFile -->
+
+    <owl:Class rdf:about="http://yaksa#DexFile">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#Heap -->
+
+    <owl:Class rdf:about="http://yaksa#Heap">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#Memory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#Libraries -->
+
+    <owl:Class rdf:about="http://yaksa#Libraries">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
+    </owl:Class>
+    
+
+
     <!-- http://yaksa#OWLClass_0f6ac0e8_4f03_4723_a112_23b5008433a9 -->
 
     <owl:Class rdf:about="http://yaksa#OWLClass_0f6ac0e8_4f03_4723_a112_23b5008433a9">
@@ -10225,6 +10637,52 @@ https://msdn.microsoft.com/en-us/library/windows/desktop/ms684841(v=vs.85).aspx<
     <owl:Class rdf:about="http://yaksa#OWLClass_ef740d0a_02fc_481a_89d3_804c39146c2e">
         <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
         <rdfs:label xml:lang="en">BrowserDownloads</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#Permissions -->
+
+    <owl:Class rdf:about="http://yaksa#Permissions">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#Resource -->
+
+    <owl:Class rdf:about="http://yaksa#Resource">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#Shared -->
+
+    <owl:Class rdf:about="http://yaksa#Shared">
+        <rdfs:subClassOf rdf:resource="http://yaksa#Libraries"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#Stack -->
+
+    <owl:Class rdf:about="http://yaksa#Stack">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#Memory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://yaksa#Test -->
+
+    <owl:Class rdf:about="http://yaksa#Test"/>
+    
+
+
+    <!-- http://yaksa#Zygote -->
+
+    <owl:Class rdf:about="http://yaksa#Zygote">
+        <rdfs:subClassOf rdf:resource="http://case.example.org/core#PropertyBundle"/>
     </owl:Class>
     
 
@@ -10782,5 +11240,5 @@ https://msdn.microsoft.com/en-us/library/windows/desktop/ms684841(v=vs.85).aspx<
 
 
 
-<!-- Generated by the OWL API (version 4.5.1) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
 
